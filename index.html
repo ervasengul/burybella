@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bury Bella</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            z-index: 1;
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            margin-top: 30vh;
+        }
+
+        .shop-button {
+            padding: 20px 50px;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            background-color: #000;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .shop-button:hover {
+            background-color: #333;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .shop-button:active {
+            transform: translateY(-2px);
+        }
+
+        /* Mobil responsive */
+        @media (max-width: 768px) {
+            .shop-button {
+                padding: 15px 40px;
+                font-size: 18px;
+                letter-spacing: 1px;
+            }
+
+            .content {
+                margin-top: 40vh;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .shop-button {
+                padding: 12px 30px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="burybella.jpg" alt="Bury Bella" class="background-image">
+
+        <div class="content">
+            <button class="shop-button" onclick="shopNow()">Shop Now</button>
+        </div>
+    </div>
+
+    <script>
+        function shopNow() {
+            window.location.href = 'https://cryptacelsis.com/password';
+        }
+    </script>
+</body>
+</html>
