@@ -41,6 +41,10 @@
             z-index: 1;
         }
 
+        .mobile-image {
+            display: none;
+        }
+
         .content {
             position: relative;
             z-index: 2;
@@ -88,6 +92,14 @@
             .background-image {
                 object-position: center 20%;
             }
+
+            .desktop-image {
+                display: none;
+            }
+
+            .mobile-image {
+                display: block;
+            }
         }
 
         @media (max-width: 480px) {
@@ -104,7 +116,8 @@
 </head>
 <body>
     <div class="container">
-        <img src="burybella.jpg" alt="Bury Bella" class="background-image">
+        <img src="computer.jpg" alt="Bury Bella" class="background-image desktop-image">
+        <img src="telephone.jpg" alt="Bury Bella" class="background-image mobile-image">
 
         <div class="content">
             <button class="shop-button" onclick="shopNow()">Shop Now</button>
@@ -113,7 +126,7 @@
 
     <script>
         function shopNow() {
-            window.location.href = 'https://cryptacelsis.com/collections/crypta-celsis-x-bury-bella';
+            window.location.href = 'https://shopier.com/burybella';
         }
     </script>
 </body>
