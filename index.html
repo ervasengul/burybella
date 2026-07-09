@@ -82,6 +82,32 @@
             transform: translateY(-2px);
         }
 
+        .side-flow {
+            position: absolute;
+            top: 0;
+            width: 12vw;
+            max-width: 160px;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .side-flow-left {
+            left: 0;
+        }
+
+        .side-flow-right {
+            right: 0;
+        }
+
+        .side-flow text {
+            fill: rgba(255, 255, 255, 0.35);
+            font-family: 'Arial', sans-serif;
+            font-weight: 300;
+            font-size: 20px;
+            letter-spacing: 4px;
+        }
+
         /* Mobil responsive */
         @media (max-width: 768px) {
             .shop-button {
@@ -105,6 +131,10 @@
             .mobile-image {
                 display: block;
             }
+
+            .side-flow {
+                display: none;
+            }
         }
 
         @media (max-width: 480px) {
@@ -121,8 +151,22 @@
 </head>
 <body>
     <div class="container">
+        <svg class="side-flow side-flow-left" viewBox="0 0 200 1200" preserveAspectRatio="xMidYMid slice">
+            <path id="flowPathLeft" d="M100,0 C180,120 20,240 100,360 C180,480 20,600 100,720 C180,840 20,960 100,1080 C180,1200 20,1200 100,1200" fill="none"/>
+            <text>
+                <textPath href="#flowPathLeft" startOffset="0">DROP LIVE • DROP LIVE • DROP LIVE • DROP LIVE • DROP LIVE • DROP LIVE • DROP LIVE •</textPath>
+            </text>
+        </svg>
+
         <img src="computer.jpg" alt="Bury Bella" class="background-image desktop-image">
         <img src="telephone.jpg" alt="Bury Bella" class="background-image mobile-image">
+
+        <svg class="side-flow side-flow-right" viewBox="0 0 200 1200" preserveAspectRatio="xMidYMid slice">
+            <path id="flowPathRight" d="M100,0 C20,120 180,240 100,360 C20,480 180,600 100,720 C20,840 180,960 100,1080 C20,1200 180,1200 100,1200" fill="none"/>
+            <text>
+                <textPath href="#flowPathRight" startOffset="0">DROP LIVE • DROP LIVE • DROP LIVE • DROP LIVE • DROP LIVE • DROP LIVE • DROP LIVE •</textPath>
+            </text>
+        </svg>
 
         <div class="content">
             <button class="shop-button" onclick="shopNow()">Shop Now</button>
